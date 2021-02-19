@@ -52,7 +52,13 @@
     "@typescript-eslint/no-unsafe-assignment": "off",
     "@typescript-eslint/no-unsafe-member-access": "off",
     "@typescript-eslint/no-unsafe-call": "off",
-    "@typescript-eslint/no-unsafe-return": "off"
+    "@typescript-eslint/no-unsafe-return": "off",
+    "react/jsx-props-no-spreading": [ 0 , {
+      "html": "ignore",
+      "custom":"enforce",
+      "explicitSpread": "enforce",
+      "exceptions": [ "string" ]
+    }]
   },
   "settings": {
     "import/resolver": {

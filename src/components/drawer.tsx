@@ -1,6 +1,6 @@
-import React, { Fragment } from 'react';
-import { Box } from 'theme-ui';
-import RcDrawer from 'rc-drawer';
+import React, { Fragment } from "react";
+import { Box } from "theme-ui";
+import RcDrawer from "rc-drawer";
 
 const Drawer = ({
   className,
@@ -17,11 +17,11 @@ const Drawer = ({
   ...props
 }) => {
   return (
-    <Fragment>
+    <>
       <RcDrawer
         open={open}
         onClose={toggleHandler}
-        className={`drawer ${className ? className : ''}`.trim()}
+        className={`drawer ${className || ""}`.trim()}
         width={width}
         placement={placement}
         handler={false}
@@ -38,18 +38,18 @@ const Drawer = ({
       </RcDrawer>
       <Box
         className="drawer__handler"
-        style={{ display: 'inline-block' }}
+        style={{ display: "inline-block" }}
         onClick={toggleHandler}
       >
         {drawerHandler}
       </Box>
-    </Fragment>
+    </>
   );
 };
 
 Drawer.defaultProps = {
-  width: '320px',
-  placement: 'left',
+  width: "320px",
+  placement: "left",
 };
 
 export default Drawer;

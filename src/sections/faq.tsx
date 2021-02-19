@@ -1,10 +1,11 @@
 /** @jsx jsx */
-import { jsx, Container, Box } from 'theme-ui';
-import SectionHeader from 'components/section-header';
-import Accordion from 'components/accordion/accordion';
+import { jsx, Container, Box } from "theme-ui";
+import SectionHeader from "components/section-header";
+import Accordion from "components/accordion/accordion";
+
 const faqs = [
   {
-    title: 'How to contact with riders emergency ?',
+    title: "How to contact with riders emergency ?",
     contents: (
       <div>
         Get your website ads tests delivered at let collect sample from the
@@ -14,7 +15,7 @@ const faqs = [
     ),
   },
   {
-    title: 'App installation failed, how to update system information?',
+    title: "App installation failed, how to update system information?",
     contents: (
       <div>
         Rhino skin maybe thick but it can be quite sensitive to sunburns and
@@ -46,9 +47,10 @@ const faqs = [
     ),
   },
 ];
-export default function Faq() {
+
+const Faq: React.FC = () => {
   return (
-    <section sx={{ variant: 'section.faq' }}>
+    <section sx={{ variant: "section.faq" }}>
       <Container>
         <SectionHeader
           title="Frequently asked question"
@@ -56,10 +58,10 @@ export default function Faq() {
         />
         <Box
           sx={{
-            display: 'flex',
-            width: ['100%', null, null, '650px', '745px'],
-            flexDirection: 'column',
-            mx: 'auto',
+            display: "flex",
+            width: ["100%", null, null, "650px", "745px"],
+            flexDirection: "column",
+            mx: "auto",
             my: -4,
           }}
         >
@@ -68,4 +70,6 @@ export default function Faq() {
       </Container>
     </section>
   );
-}
+};
+
+export default Faq;
